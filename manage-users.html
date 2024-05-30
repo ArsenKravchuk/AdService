@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div id="navigation-bar">
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Logout</a></li>
+                <li><a href="manage-users.html">Manage Users</a></li>
+                <li><a href="public-ads.html">Public Ads</a></li>
+                <li><a href="local-ads.html">Local Ads</a></li>
+                <a href="#" id="menu-icon"></a>
+              </ul>
+            </nav>
+          </div>
+    </header>
+
+    <main>
+
+    </main>
+    <div>
+        <ul>
+            <li><div>
+                <p>User1</p>
+                <button title="delete">Delete</button>
+                <button title="edit">Edit</button>
+            </div></li>
+            <li><p>User2</p>
+                <button title="delete">Delete</button>
+                <button title="edit">Edit</button></li>
+            <li><p>User2</p>
+                <button title="delete">Delete</button>
+                <button title="edit">Edit</button></li>
+        </ul>
+    </div>
+    <!-- User Management Page -->
+    <div id="user-management-page" class="page hidden">
+        <h1>User Management</h1>
+        <button id="logout-button">Logout</button>
+        <button id="create-user-button">Create User</button>
+        
+        <!-- User List -->
+        <div id="user-list">
+            <h2>Users</h2>
+            <ul id="users"></ul>
+        </div>
+
+        <!-- User Details -->
+        <div id="user-details" class="hidden">
+            <h2>User Details</h2>
+            <p id="user-info"></p>
+            <button id="edit-user-button">Edit</button>
+            <button id="delete-user-button">Delete</button>
+        </div>
+    </div>
+    <button title="Add User">Add new user</button>
+
+    <!-- Create/Edit User Dialog -->
+    <div id="user-dialog" class="dialog hidden">
+        <h2 id="dialog-title">Create/Edit User</h2>
+        <form id="user-form">
+            <label for="dialog-username">Username:</label>
+            <input type="text" id="dialog-username" required>
+            <label for="dialog-password">Password:</label>
+            <input type="password" id="dialog-password" required>
+            <label for="dialog-confirm-password">Confirm Password:</label>
+            <input type="password" id="dialog-confirm-password" required>
+            <label for="dialog-role">Role:</label>
+            <select id="dialog-role" required>
+                <option value="Admin">Admin</option>
+                <option value="Regular">Regular</option>
+            </select>
+            <button type="submit">Ok</button>
+            <button type="button" id="cancel-button">Cancel</button>
+        </form>
+        <div id="dialog-error" class="error"></div>
+    </div>
+    <main>
+        <form id="create-user-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="admin">Admin</option>
+                <option value="regular">Regular</option>
+            </select>
+            <button type="submit">Ok</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+    </main>
+
+    <!-- Notifications -->
+    <div id="notifications" class="hidden"></div>
+
+    <footer>
+        <p>Author: Arsen Kravchuk<br>
+        <a href="mailto:arsen.kravchuk.shi.2022@lpnu.ua">arsen.kravchuk.shi.2022@lpnu.ua</a></p>
+    </footer>
+</body>
+</html>
