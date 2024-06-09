@@ -95,6 +95,30 @@ _.post('/login', async (req, res, next) => {
     })(req,res,next);
 });
 
+
+_.get('/user', async (req, res) => {
+    try {
+
+        console.group('\n GET /user - request details: ');
+            console.log('------------------\n');
+            console.log('req.body', req.body);
+            console.log('req.params', req.params);
+            console.log('req.header', req.headers);
+            console.log('req.isAuthenticated', req.isAuthenticated());
+            console.log('req.user', req.user);
+        console.groupEnd();
+
+        res.sendStatus(200);
+    } catch(e) {
+        console.error(new Error(e.message));
+        res.status(500).json({
+            timeStamp: Date.now(),
+            msg: `Failed to get user, internal server error`,
+            code: 500
+        });
+    }
+});
+
 _.post('/logout', async(req,res) => {
     try {
         res.status(200).json({
